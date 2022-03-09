@@ -74,33 +74,36 @@ const item = {
 	year: 1994,
 };
 
-let movieCardFront = document.createElement('div');
-movieCardFront.classList.add('movie_card', 'movie_card_front');
-let movieCardBack = document.createElement('div');
-movieCardBack.classList.add('movie_card', 'movie_card_back');
+let movieCard = document.createElement('div');
+movieCard.classList.add('flip_card');
 
-movieCardFront.innerHTML = `
-		<div class="movie_image_container">
-			<img src=${item.image_url} alt=${item.title} />
-		</div>
-		<div class="movie_content">
-			<h2>${item.title}</h2>
-			<div>
-				<p>Rated ${item.content_rating}</p>
-				<p>${item.rating}/10</p>
-				<p>${item.year}</p>
-			</div>
-			<div>
-				<p>${item.movie_length}minutes</p>
-				<a href=${item.trailer} target="_blank">Trailer</a>
-			</div>
-		</div>
-	`;
+movieCard.innerHTML = `
+	<div class="card_container">
+			<div class="card">
+				<div class="card_face front">
+					<div class="movie_image_container">
+						<img src="${item.image_url}" alt="${item.title}" />
+					</div>
 
-movieCardBack.innerHTML = `
-			<p>
-				${item.description}
-			</p>
-	`;
-document.body.appendChild(movieCardFront);
-document.body.appendChild(movieCardBack);
+					<div class="movie_content">
+						<h2>${item.title}</h2>
+						<div>
+							<p>Rated ${item.content_rating}</p>
+							<p>${item.rating}/10</p>
+							<p>${item.year}</p>
+						</div>
+						<div>
+							<p>${item.movie_length}minutes</p>
+							<a href="${item.trailer}" target="_blank">Trailer</a>
+						</div>
+					</div>
+				</div>
+				<div class="card_face back">
+					<div>
+						<p>${item.description}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		`;
+document.body.appendChild(movieCard);
