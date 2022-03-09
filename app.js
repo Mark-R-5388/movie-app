@@ -2,7 +2,7 @@ const headers = {
 	method: 'GET',
 	headers: {
 		'x-rapidapi-host': 'data-imdb1.p.rapidapi.com',
-		'x-rapidapi-key': 'KEY',
+		'x-rapidapi-key': '58bfe67fd0msh66ab57128ff9b03p19516bjsn552c9cb81f7b',
 	},
 };
 
