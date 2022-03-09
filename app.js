@@ -2,6 +2,7 @@ const headers = {
 	method: 'GET',
 	headers: {
 		'x-rapidapi-host': 'data-imdb1.p.rapidapi.com',
+		'x-rapidapi-key': '58bfe67fd0msh66ab57128ff9b03p19516bjsn552c9cb81f7b',
 	},
 };
 
@@ -68,7 +69,7 @@ const createCard = (item, container) => {
 							<p>${item.year}</p>
 						</div>
 						<div class="movie_content_row_2">
-							<p>${item.movie_length}minutes</p>
+							<p>${item.movie_length} minutes</p>
 							<a href="${item.trailer}" target="_blank">Trailer</a>
 						</div>
 					</div>
@@ -89,38 +90,3 @@ getMovies(baseUrl, topTenActionMoviesUrl, headers, topTenActionMoviesSection);
 getMovies(baseUrl, topTenComedyMoviesUrl, headers, topTenComedyMoviesSection);
 getMovies(baseUrl, topTenRomanceMoviesUrl, headers, topTenRomanceMoviesSection);
 getMovies(baseUrl, topTenHorrorMoviesUrl, headers, topTenHorrorMoviesSection);
-
-// let movieCard = document.createElement('div');
-// movieCard.classList.add('flip_card');
-
-// movieCard.innerHTML = `
-// 	<div class="card_container">
-// 			<div class="card">
-// 				<div class="card_face front">
-// 					<div class="movie_image_container">
-// 						<img src="${item.image_url}" alt="${item.title}" />
-// 					</div>
-
-// 					<div class="movie_content">
-// 						<h3>${item.title}</h3>
-// 						<div class="movie_content_row_1">
-// 							<p>Rated ${item.content_rating}</p>
-// 							<p>${item.rating}/10</p>
-// 							<p>${item.year}</p>
-// 						</div>
-// 						<div class="movie_content_row_2">
-// 							<p>${item.movie_length}minutes</p>
-// 							<a href="${item.trailer}" target="_blank">Trailer</a>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				<div class="card_face back">
-// 					<div class="back_content_container">
-// 					<p>${item.description}</p>
-// 					</div>
-
-// 				</div>
-// 			</div>
-// 		</div>
-// 		`;
-// document.body.appendChild(movieCard);

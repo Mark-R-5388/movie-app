@@ -6,6 +6,19 @@ html {
 	background: rgb(2, 2, 2);
 }
 
+h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	color: rgb(170, 170, 170);
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 1.75rem;
+	color: rgb(170, 170, 170);
+}
+
 h3 {
 	text-transform: capitalize;
 	font-size: 1.25rem;
@@ -14,34 +27,32 @@ h3 {
 
 /* Section Containers Start */
 section {
-	margin: 0 auto;
-	width: 95%;
+	border-top: 2px solid rgb(156, 156, 156);
+	margin: 2rem 0;
+	padding: 2rem 0;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
+
 /* Section Containers End */
 
-/* Movie Containers Start */
+/* Movie List Container Start */
 .movie_list_container {
-	padding: 1rem 0;
-	border: 1px solid blue;
-	width: 95%;
-	min-height: 31rem;
 	margin: 0 auto;
+	width: 95%;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
 	justify-content: center;
-	align-items: center;
+	align-content: center;
 }
-/* Movie Containers End */
+/* Movie List Container End */
 
 /* Card Container Start */
 .card_container {
 	width: 20rem;
-	max-width: 90%;
-	min-height: 30rem;
+	max-width: 95%;
 	height: 30rem;
 	margin: 0 auto 1.5rem auto;
 	color: rgb(170, 170, 170);
@@ -122,6 +133,7 @@ section {
 .back_content_container {
 	width: 90%;
 	height: 90%;
+	overflow-y: hidden;
 	line-height: 1.6;
 }
 /* Card Container End */
